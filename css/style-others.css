@@ -1,0 +1,43 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --color-header: #2A1232;
+
+}
+header{
+    padding: 0px 5vw 0 10vw;
+    flex-direction: column;
+}
+header > div.menu-mobile {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header > div.menu-mobile > svg.botao-menu{
+    display: inline;
+    cursor: pointer;
+}
+header > nav{
+    max-height: 0;          /* começa fechado */
+    overflow: hidden;       /* esconde conteúdo extra */
+    opacity: 0;             /* invisível */
+    transition: max-height 1s ease, opacity 0.8s ease;
+    display: block;
+}
+header > nav > a{
+    font-size: 1.1em;
+    margin: 15px 0px;
+    display: block;
+    text-align: center;
+}
+nav.ativo{
+    display: block;
+    max-height: 160px;  /* valor suficiente para caber todos os links */
+    opacity: 1;         /* visível */
+}
+
+
+
+
