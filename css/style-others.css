@@ -5,15 +5,17 @@
     --color-header: #2A1232;
 
 }
+
+/* CABEÇA COM A LOGO, HAMBURGUER E MENU */
 header{
-    padding: 0px 5vw 0 10vw;
-    flex-direction: column;
+    padding: 0px 5vw 0 10vw; /* Alterando para ficar mais agradável em mobile */
+    flex-direction: column; /* Criando alterações para celular/tablet */
 }
 header > div.menu-mobile {
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-between; /* Deixando a primeira caixa em row */
+    align-items: center; 
 }
 header > div.menu-mobile > svg.botao-menu{
     display: inline;
@@ -37,7 +39,36 @@ nav.ativo{
     max-height: 160px;  /* valor suficiente para caber todos os links */
     opacity: 1;         /* visível */
 }
+/* ==================================================================== */
 
 
+/* Alterações para otimizar em celular */
+main > section.marketing{
+    background: black url(../assets/images/background-marketing.png) right top fixed;
+    justify-content: center;
+}
+main > section.marketing > article.marketing{
+    min-height: 160px;
+    min-width: 370px;
+    margin-left: 0;
 
+    opacity: 95%; /* Criando design único pra dispositivos mobile */
+}
+/* ==================================================================== */
+
+
+/*  */
+main > section.sobre{
+    max-height: 738px;
+}
+main > section.sobre > article.sobre{
+    margin: 40px 0px 15px 0px;
+    padding: 0px 5px;
+}
+main > section.sobre > article.sobre > h2{
+    margin-bottom: 22.5px;
+}
+main > section.sobre > article.sobre > p{
+    margin-bottom: 15px;
+}
 

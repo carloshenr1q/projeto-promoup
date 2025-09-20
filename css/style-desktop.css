@@ -1,9 +1,13 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root{
     --color-header: #2A1232;
-
+    --color-marketing-fundo: #2C0F39;
+    --color-marketing-fonte: #E47E29;
+    --color-marketing-fundoBotao: #340C43;
+    --color-sobre-fundo: #F6F9F5;
 }
 
 *{
@@ -18,9 +22,12 @@ body{
     height: 100%;
     background-color: black;
 }
+
+/* CABEÇA COM A LOGO E MENU */
 header{
     background-color: var(--color-header);
     padding: 0px 5vw;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -39,11 +46,105 @@ header > nav > a{
     font-family: 'Montserrat', sans-serif;
     color: white;
     text-decoration: none;
+
     margin: 0 10px;
+}
+/* ==================================================================== */
+
+
+
+main{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+main > section.marketing{
+    height: 760px;
+    background: black url(../assets/images/background-marketing.png) center center scroll;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+}
+main > section.marketing > article.marketing{
+    text-align: center;
+
+    max-height: 250px;
+    max-width: 700px;
+    min-height: 150px;
+    min-width: 350px;
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-marketing-fundo);
+
+    margin-left: 7%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+main > section.marketing > article.marketing > h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1.8em, 4vw, 2.5em);
+    font-weight: 400;
+    color: var(--color-marketing-fonte);
+}
+main > section.marketing > article.marketing > a.botao{
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1em, 4vw, 1.2em);
+    font-weight: 350;
+    text-decoration: none;
+    color: var(--color-marketing-fonte);
+
+    background-color: var(--color-marketing-fundoBotao);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.301);
+
+    padding: 15px;
+
+    transition: all 1s;
+}
+main > section.marketing > article.marketing > a.botao:hover{ /* Dando destaque ao botão "Entre em Contato" */
+    transform: scale(103%);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.301);
+}
+main > section.sobre{
+    text-align: center;
+
+    max-height: 538px;
+    height: 100%;
+    background-color: var(--color-sobre-fundo);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main > section.sobre > article.sobre{
+    max-width: 930px;
+    width: 100%;
+    margin: 80px 0px 30px 0px;
+}
+main > section.sobre > article.sobre > h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(2.5em, 4vw, 3.75em);
+    letter-spacing: 3.5px;
+    font-weight: 700;
+    color: var(--color-marketing-fonte);
+
+    margin-bottom: 45px;
+}
+main > section.sobre > article.sobre > p{
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(1em, 4vw, 1.25em);
+    font-weight: 250;
+    line-height: 1.6;
+
+    margin-bottom: 30px;
 }
 
 /* BOX OCULTOS */
 
 header > div.menu-mobile > svg.botao-menu{
-    display: none;
+    display: none; /* Ocultando botão hamburguer em desktop */
 }
