@@ -1,13 +1,15 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root{
-    --color-header: #2A1232;
+    --color-header: #2F0F4E;
     --color-marketing-fundo: #2C0F39;
-    --color-marketing-fonte: #E47E29;
+    --color-marketing-fonte: #E48E16;
     --color-marketing-fundoBotao: #340C43;
     --color-sobre-fundo: #F6F9F5;
+    --color-ceo-fonte: #E48E16;
 }
 
 *{
@@ -23,21 +25,23 @@ body{
     background-color: black;
 }
 
-/* CABEÇA COM A LOGO E MENU */
+/* Header com a logo e menu */
 header{
     background-color: var(--color-header);
-    padding: 0px 5vw;
+    padding: 0px 3vw;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 header > div.menu-mobile{
+    display: flex;
+    align-items: center;
     height: 75.75px;
 }
 header > div.menu-mobile > img.logo{
-    width: 85px;
-    height: 75.75px;
+    /* width: 85px; */
+    height: 65px;
 }
 header > nav{
     display: inline;
@@ -52,7 +56,7 @@ header > nav > a{
 /* ==================================================================== */
 
 
-
+/* Main com marketing e sobre */
 main{
     width: 100%;
 
@@ -94,11 +98,12 @@ main > section.marketing > article.marketing > h2{
 main > section.marketing > article.marketing > a.botao{
     font-family: 'Montserrat', sans-serif;
     font-size: clamp(1em, 4vw, 1.2em);
-    font-weight: 350;
+    font-weight: 450;
     text-decoration: none;
     color: var(--color-marketing-fonte);
 
     background-color: var(--color-marketing-fundoBotao);
+    border-radius: 10px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.301);
 
     padding: 15px;
@@ -106,8 +111,7 @@ main > section.marketing > article.marketing > a.botao{
     transition: all 1s;
 }
 main > section.marketing > article.marketing > a.botao:hover{ /* Dando destaque ao botão "Entre em Contato" */
-    transform: scale(103%);
-    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.301);
+    transform: scale(105%);
 }
 main > section.sobre{
     text-align: center;
@@ -136,13 +140,194 @@ main > section.sobre > article.sobre > h2{
 }
 main > section.sobre > article.sobre > p{
     font-family: "Poppins", sans-serif;
-    font-size: clamp(1em, 4vw, 1.25em);
+    font-size: clamp(1em, 2vw, 1.25em);
     font-weight: 250;
     line-height: 1.6;
 
     margin-bottom: 30px;
 }
+/* ==================================================================== */
 
+
+/* Main com ceo/valores */
+main > section.valores{
+    background: gray url(../assets/images/banner-desktop.png) center center scroll;
+    background-size: cover;
+    height: 650px;
+    width: 100%;
+    /* padding: 0px 10vw; */
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+main > section.valores > article.ceo{
+    text-align: center;
+    max-width: 450px;
+    margin: 0 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main > section.valores > article.ceo > img.ceos{
+    width: 320px;
+    border-radius: 20px;
+    margin-top: -20px;
+    margin-bottom: 20px;
+
+    display: block;
+}
+main > section.valores > article.ceo > h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6em;
+    text-shadow: 1px 1px 1px black;
+    color: var(--color-ceo-fonte);
+
+    margin-bottom: 5px;
+}
+main > section.valores > article.ceo > p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1em, 1.5vw, 1.1em);
+    font-weight: 500;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    color: var(--color-ceo-fonte);
+}
+main > section.valores > article.valores{
+    text-align: center;
+    
+    max-width: 688px;
+    margin: 0 20px;
+
+    display: flex;
+    flex-direction: column;
+}
+main > section.valores > article.valores > h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1.5em, 1.8vw, 1.9em);
+    font-weight: 700;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    color: var(--color-ceo-fonte);
+}
+main > section.valores > article.valores > ul > li{
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1em, 1.8vw, 1.2em);
+    font-weight: 450;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    color: var(--color-ceo-fonte);
+
+    list-style: none;
+}
+main > section.valores > article.valores > p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1em, 1.8vw, 1.2em);
+    font-weight: 450;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    color: var(--color-ceo-fonte);
+}
+/* ==================================================================== */
+
+
+/* Main com serviços, background e picture */
+main > section.servicos{
+    background-color: var(--color-sobre-fundo);
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+main > section.servicos > h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.8em;
+    /* font-size: clamp(2em, 0.8vw, 5em); */
+    font-weight: 750;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color-ceo-fonte);
+
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+main > section.servicos > article.tipos{
+    text-align: center;
+
+    margin: 15px 0px 30px 0px;
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main > section.servicos > article.tipos > h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    color: var(--color-ceo-fonte);
+
+    margin-bottom: 5px;
+}
+main > section.servicos > article.tipos > p{
+    font-family: 'Montserrat', sans-serif;
+    max-width: 870px;
+    width: 100%;
+}
+main > section.servicos > article.tipos > div.background{
+    background-color: #2F0F4E;
+
+    margin-top: 20px;
+    height: 330px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    overflow-x: auto;
+    scrollbar-width: none;
+    
+}
+@media only screen and (max-width: 1765px){
+    main > section.servicos > article.tipos > div.background{
+        cursor: grab;
+        white-space: nowrap;
+        user-select: none;
+    }
+    main > section.servicos > article.tipos > div.background:active{
+        cursor: grabbing;
+    }
+    main > section.servicos > article.tipos > div.background > div.picture{
+        pointer-events: none;
+    }
+}
+main > section.servicos > article.tipos > div.background > div.picture{
+    background-color: var(--color-sobre-fundo);
+
+    height: 290px;
+    width: 260px;
+    padding: 5px 10px 0px 10px;
+    margin: 0px 50px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+main > section.servicos > article.tipos > div.background > div.picture > img.imagem{
+    width: 250px;
+    height: 250px;
+
+    object-fit: cover; /* Ajustando a imagem para o tamanho da caixa */
+}
+main > section.servicos > article.tipos > div.background > div.picture > img.tachinha{
+    width: 50px;
+    height: 40px;
+}
+main > section.servicos > article.tipos > div.background > div.picture > p{
+    font-family: "Sriracha", cursive;
+    font-size: 1.05em;
+}
 /* BOX OCULTOS */
 
 header > div.menu-mobile > svg.botao-menu{

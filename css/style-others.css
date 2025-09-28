@@ -2,14 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root{
-    --color-header: #2A1232;
+    --color-header: #2F0F4E;
 
 }
 
 /* CABEÇA COM A LOGO, HAMBURGUER E MENU */
 header{
+    width: 100%;
     padding: 0px 5vw 0 10vw; /* Alterando para ficar mais agradável em mobile */
+
     flex-direction: column; /* Criando alterações para celular/tablet */
+
+    position: absolute;
 }
 header > div.menu-mobile {
     width: 100%;
@@ -20,6 +24,10 @@ header > div.menu-mobile {
 header > div.menu-mobile > svg.botao-menu{
     display: inline;
     cursor: pointer;
+}
+header > div.menu-mobile > img.logo{
+    /* width: 85px; */
+    height: 55px;
 }
 header > nav{
     max-height: 0;          /* começa fechado */
@@ -42,7 +50,7 @@ nav.ativo{
 /* ==================================================================== */
 
 
-/* Alterações para otimizar em celular */
+/* Alterações para otimizar em celular em main */
 main > section.marketing{
     background: black url(../assets/images/background-marketing.png) right top fixed;
     justify-content: center;
@@ -57,7 +65,7 @@ main > section.marketing > article.marketing{
 /* ==================================================================== */
 
 
-/*  */
+/* Alterações no sobre p/ celular e tablet */
 main > section.sobre{
     max-height: 738px;
 }
@@ -71,4 +79,57 @@ main > section.sobre > article.sobre > h2{
 main > section.sobre > article.sobre > p{
     margin-bottom: 15px;
 }
+/* ==================================================================== */
 
+
+/* Criando alterações personalizadas em ceo e valores p/ diferentes tamanhos de tela do tablet e mobile */
+@media only screen and (min-width: 773px) { /* TABLET */
+    main > section.valores{
+        background: gray url(../assets/images/banner-mobile.png) center top scroll;
+        background-size: cover;
+        height:550px;
+
+        flex-direction: row;
+    }
+    main > section.valores > article.ceo > img.ceos{
+        width: 250px;
+    }
+}
+@media only screen and (max-width: 772px){ /* MOBILE */
+    main > section.valores{
+        background: gray url(../assets/images/banner-mobile.png) center bottom scroll;
+        height:900px;
+
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    main > section.valores > article.ceo > img.ceos{
+        margin-top: 1px;
+        width: 220px;
+    }
+
+}
+/* ==================================================================== */
+
+
+/* Otimizando o serviço para mobile/tablet */
+main > section.servicos > article.tipos > div.background{
+    overflow-x: scroll;
+    scrollbar-width: none;
+}
+main > section.servicos > article.tipos > div.background > div.picture{
+    margin: 0 50px;
+    padding: 5px 10px 0px 10px;
+}
+main > section.servicos > article.tipos > div.background > div.picture > img.imagem{
+    width: 240px;
+    height: 240px;
+}
+main > section.servicos > h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.1em;
+}
+main > section.servicos > article.tipos > h2{
+    margin-bottom: 10px;
+}
+/* ==================================================================== */
