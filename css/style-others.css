@@ -52,7 +52,8 @@ nav.ativo{
 
 /* Alterações para otimizar em celular em main */
 main > section.marketing{
-    background: black url(../assets/images/background-marketing.png) right top fixed;
+    background: url(../assets/images/background-marketing.png) right top;
+
     justify-content: center;
 }
 main > section.marketing > article.marketing{
@@ -92,7 +93,7 @@ main > section.sobre > article.sobre > p{
         flex-direction: row;
     }
     main > section.valores > article.ceo > img.ceos{
-        width: 250px;
+        width: 280px;
     }
 }
 @media only screen and (max-width: 772px){ /* MOBILE */
@@ -105,7 +106,7 @@ main > section.sobre > article.sobre > p{
     }
     main > section.valores > article.ceo > img.ceos{
         margin-top: 1px;
-        width: 220px;
+        width: 250px;
     }
 
 }
@@ -113,18 +114,6 @@ main > section.sobre > article.sobre > p{
 
 
 /* Otimizando o serviço para mobile/tablet */
-main > section.servicos > article.tipos > div.background{
-    overflow-x: scroll;
-    scrollbar-width: none;
-}
-main > section.servicos > article.tipos > div.background > div.picture{
-    margin: 0 50px;
-    padding: 5px 10px 0px 10px;
-}
-main > section.servicos > article.tipos > div.background > div.picture > img.imagem{
-    width: 240px;
-    height: 240px;
-}
 main > section.servicos > h2{
     font-family: 'Montserrat', sans-serif;
     font-size: 2.1em;
@@ -132,4 +121,85 @@ main > section.servicos > h2{
 main > section.servicos > article.tipos > h2{
     margin-bottom: 10px;
 }
+main > section.servicos > article.tipos > div.background > div.group-pictures{
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch; /* suavidade no iOS */
+}
+main > section.servicos > article.tipos > div.background  > div.group-pictures > div.picture{
+    padding: 5px 5px 0px 5px;
+}
+main > section.servicos > article.tipos > div.background > div.group-pictures > div.picture > img.imagem{
+    width: 240px;
+    height: 240px;
+}
+main > section.servicos > article.tipos > div.background > div.group-pictures > div.picture > p{
+    height: 40px;
+    padding: 6px 0px;
+}
 /* ==================================================================== */
+
+
+/* Otimizando o cliente para mobile/tablet */
+main > section.cliente{
+    padding: 1px 0px 0px 0px;
+    overflow: hidden; /* importante */
+}
+main > section.cliente > h2{
+    font-size: 2em;
+    margin-bottom: -20px;
+}
+main > section.cliente > article.clientes{
+    width: 100%; /* largura ajusta ao conteúdo total */
+
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+
+    overflow-x: scroll;
+
+    will-change: transform;
+    scrollbar-width: none;
+    touch-action: none;
+    -webkit-user-select: none;
+    user-select: none;
+
+    scroll-behavior: smooth;
+    scroll-snap-type: x proximity;
+    transition: all 1s ease;
+
+    pointer-events: none;
+}
+main > section.cliente > article.clientes::-webkit-scrollbar {
+    display: none;
+}
+main > section.cliente > article.clientes > img{
+    width: 190px;
+    margin: 0 40px;
+
+    display: block;
+
+    scroll-snap-align: center;
+    scroll-snap-stop: normal;
+}
+main > section.cliente > article.clientes > img.clone1, img.clone2{
+    display: block;
+}
+/* ==================================================================== */
+
+
+/* Responsividade em depoimentos */
+main > section.depoimento > h2{
+    font-size: 2em;
+}
+main > section.depoimento > article.depoimentos > div.box-depoimentos{
+    margin: 0 10px;
+
+    justify-content: flex-start;
+    
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+}
+main > section.depoimento > article.depoimentos > div.box-depoimentos > div.box-depoimento{
+    flex: none;
+}

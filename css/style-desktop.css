@@ -18,7 +18,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 body{
     width: 100%;
     height: 100%;
@@ -45,6 +47,7 @@ header > div.menu-mobile > img.logo{
 }
 header > nav{
     display: inline;
+    cursor: pointer;
 }
 header > nav > a{
     font-family: 'Montserrat', sans-serif;
@@ -52,6 +55,11 @@ header > nav > a{
     text-decoration: none;
 
     margin: 0 10px;
+
+    transition: all 0.5s ease-in-out;
+}
+header > nav > a:hover{
+    color: var(--color-marketing-fonte);
 }
 /* ==================================================================== */
 
@@ -127,7 +135,7 @@ main > section.sobre{
 main > section.sobre > article.sobre{
     max-width: 930px;
     width: 100%;
-    margin: 80px 0px 30px 0px;
+    margin: 50px 0px 30px 0px;
 }
 main > section.sobre > article.sobre > h2{
     font-family: 'Montserrat', sans-serif;
@@ -171,7 +179,7 @@ main > section.valores > article.ceo{
     align-items: center;
 }
 main > section.valores > article.ceo > img.ceos{
-    width: 320px;
+    width: 350px;
     border-radius: 20px;
     margin-top: -20px;
     margin-bottom: 20px;
@@ -242,7 +250,7 @@ main > section.servicos{
 }
 main > section.servicos > h2{
     font-family: 'Montserrat', sans-serif;
-    font-size: 2.8em;
+    font-size: 2.5em;
     /* font-size: clamp(2em, 0.8vw, 5em); */
     font-weight: 750;
     text-align: center;
@@ -273,63 +281,239 @@ main > section.servicos > article.tipos > p{
     font-family: 'Montserrat', sans-serif;
     max-width: 870px;
     width: 100%;
+    padding: 0px 1px;
 }
 main > section.servicos > article.tipos > div.background{
-    background-color: #2F0F4E;
+    background-color: var(--color-header);
 
     margin-top: 20px;
-    height: 330px;
+    height: 320px;
     width: 100%;
 
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    -webkit-overflow-scrolling: touch;
+}
+main > section.servicos > article.tipos > div.background > div.group-pictures{
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
 
     overflow-x: auto;
     scrollbar-width: none;
-    
 }
-@media only screen and (max-width: 1765px){
+@media only screen and (max-width: 1595px){
     main > section.servicos > article.tipos > div.background{
+        height: 336px;
+        
         cursor: grab;
         white-space: nowrap;
         user-select: none;
+
+        transition:  1s ease;
     }
     main > section.servicos > article.tipos > div.background:active{
         cursor: grabbing;
     }
-    main > section.servicos > article.tipos > div.background > div.picture{
+    main > section.servicos > article.tipos > div.background > div.group-pictures{
+        justify-content: flex-start;
+    }
+    main > section.servicos > article.tipos > div.background > div.group-pictures::-webkit-scrollbar {
+    display: none;
+    }
+    main > section.servicos > article.tipos > div.background > div.group-pictures > div.picture{
         pointer-events: none;
     }
+    main > section.servicos > article.tipos > div.background > div.progresso-bar{
+        background: var(--color-sobre-fundo); /* cor do track */
+        border-radius: 6px;
+
+        height: 6px;
+        margin: 0px auto;
+        width: calc(40% - 50px);      /* ajustável */
+        max-width: 300px;   /* opcional */
+        position: relative;
+        
+        transition: opacity 160ms ease;
+        pointer-events: none;          /* não interfere com toques */
+    }
+    main > section.servicos > article.tipos > div.background > div.progresso-bar > div.progresso-thumb{
+        background: #6c2eb9;    /* cor da bolinha — ajuste para sua paleta */
+        box-shadow: 1px 2px 6px rgba(0,0,0,0.5);
+        border-radius: 50%;
+
+        height: 14px;
+        width: 14px;
+
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%); /* X será ajustado via JS */
+        transition: transform 80ms linear; /* suavidade */
+
+        position: absolute;
+    }
 }
-main > section.servicos > article.tipos > div.background > div.picture{
+main > section.servicos > article.tipos > div.background > div.group-pictures > div.picture{
     background-color: var(--color-sobre-fundo);
 
     height: 290px;
     width: 260px;
     padding: 5px 10px 0px 10px;
-    margin: 0px 50px;
+    margin: 0 30px;
 
     display: flex;
     align-items: center;
     flex-direction: column;
 }
-main > section.servicos > article.tipos > div.background > div.picture > img.imagem{
-    width: 250px;
+main > section.servicos > article.tipos > div.background > div.group-pictures > div.picture > img.imagem{
     height: 250px;
+    width: 250px;
 
     object-fit: cover; /* Ajustando a imagem para o tamanho da caixa */
 }
-main > section.servicos > article.tipos > div.background > div.picture > img.tachinha{
-    width: 50px;
-    height: 40px;
-}
-main > section.servicos > article.tipos > div.background > div.picture > p{
+main > section.servicos > article.tipos > div.background > div.group-pictures > div.picture > p{
     font-family: "Sriracha", cursive;
     font-size: 1.05em;
+
+    height: 35px;
+    padding: 2px 0px;
 }
+/* ==================================================================== */
+
+
+/* Main com cliente, clientes e logos */
+main > section.cliente{
+    background-color: var(--color-sobre-fundo);
+    padding: 10px 50px 50px 50px;
+
+    width: 100%;
+    max-width: 1920px;
+    height: 100%;
+    max-height: 785px;
+}
+main > section.cliente > h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--color-ceo-fonte);
+}
+main > section.cliente > article.clientes{
+    gap: 80px;
+
+    margin: auto;
+    width: 100%;
+    max-width: 1300px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+}
+main > section.cliente > article.clientes > img{
+    width: clamp(50px, 15vw, 245px);
+}
+/* ==================================================================== */
+
+
+/* main com depoimentos */
+main > section.depoimento{
+    background-color: var(--color-header);
+
+    width: 100%;
+    max-width: 1920px;
+    height: 100%;
+    max-height: 540px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    overflow: hidden;
+}
+main > section.depoimento > h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(2em, 15vw, 2.5em);
+    font-weight: 400;
+    text-transform: uppercase;
+    color: white;
+
+    margin-top: 25px;
+
+    text-align: center;
+}
+main > section.depoimento > article.depoimentos{
+    width: 100%;
+    max-width: 850px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow-x: hidden;
+}
+main > section.depoimento > article.depoimentos > svg.seta{
+    cursor: pointer;
+}
+main > section.depoimento > article.depoimentos > div.box-depoimentos{
+    margin: 0 50px;
+    width: 100%;
+    max-width: 650px;
+    min-height: 330px;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    scroll-behavior: smooth;
+    scroll-snap-type: x proximity;
+
+    overflow-x: hidden;
+}
+main > section.depoimento > article.depoimentos > div.box-depoimentos > div.box-depoimento{
+    color: white;
+
+    margin: 0 100px;
+    width: 100%;
+    max-width: 490px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 450px;
+
+    scroll-snap-align: center;
+    scroll-snap-stop: normal;
+}
+main > section.depoimento > article.depoimentos > div.box-depoimentos > div.box-depoimento > div.texto > p{
+    font-family: "Poppins", sans-serif;
+    font-weight: 250;
+    text-align: center;
+}
+main > section.depoimento > article.depoimentos > div.box-depoimentos > div.box-depoimento > div.autor{
+    text-align: center;
+
+    margin-top: 25px;
+}
+main > section.depoimento > article.depoimentos > div.box-depoimentos > div.box-depoimento > div.autor > p.cargo{
+    font-family: "Poppins", sans-serif;
+    font-weight: 450;
+    color: yellow;
+}
+
 /* BOX OCULTOS */
 
 header > div.menu-mobile > svg.botao-menu{
     display: none; /* Ocultando botão hamburguer em desktop */
+}
+main > section.cliente > article.clientes > img.clone1, img.clone2{
+    display: none;
 }
