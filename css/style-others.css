@@ -26,8 +26,7 @@ header > div.menu-mobile > svg.botao-menu{
     cursor: pointer;
 }
 header > div.menu-mobile > img.logo{
-    /* width: 85px; */
-    height: 55px;
+    width: 130px;
 }
 header > nav{
     max-height: 0;          /* começa fechado */
@@ -202,4 +201,38 @@ main > section.depoimento > article.depoimentos > div.box-depoimentos{
 }
 main > section.depoimento > article.depoimentos > div.box-depoimentos > div.box-depoimento{
     flex: none;
+}
+/* ==================================================================== */
+
+
+
+footer > div.bloco1{
+    flex-direction: column;
+}
+footer > div.bloco1 > div.logo-redes{
+    height: 300px;
+
+    row-gap: 40px;
+    padding-left: 0px;
+
+    width: 100%;
+    max-width: 554.13px;
+}
+footer > div.bloco1 > div.logo-redes > div.logo > p{
+    width: auto;
+}
+footer > div.bloco1 > div.contato{
+    margin-bottom: 45px;
+}
+footer > div.bloco1 > div.contato > ul{
+    row-gap: 10px;
+}
+/* ==================================================================== */
+
+div.bolha{
+    left: calc(90vw - 20px);
+}
+div.bolha:hover > p{
+    opacity: 0;
+    visibility: collapse;
 }

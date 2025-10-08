@@ -42,8 +42,7 @@ header > div.menu-mobile{
     height: 75.75px;
 }
 header > div.menu-mobile > img.logo{
-    /* width: 85px; */
-    height: 65px;
+    width: 175px;
 }
 header > nav{
     display: inline;
@@ -392,7 +391,7 @@ main > section.cliente{
     padding: 10px 50px 50px 50px;
 
     width: 100%;
-    max-width: 1920px;
+    /* max-width: 1920px; */
     height: 100%;
     max-height: 785px;
 }
@@ -427,7 +426,7 @@ main > section.depoimento{
     background-color: var(--color-header);
 
     width: 100%;
-    max-width: 1920px;
+    /* max-width: 1920px; */
     height: 100%;
     max-height: 540px;
 
@@ -508,12 +507,182 @@ main > section.depoimento > article.depoimentos > div.box-depoimentos > div.box-
     font-weight: 450;
     color: yellow;
 }
+/* ==================================================================== */
 
-/* BOX OCULTOS */
+
+/* Footer */
+footer{
+    background-color: #4c0494;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+    max-height: 750px;
+}
+footer > div.bloco1{
+    background-color: var(--color-header);
+
+    padding: 0 20px;
+    margin-top: 1px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1 1 auto;
+}
+footer > div.bloco1 > div.logo-redes{
+    row-gap: 70px;
+    padding-left: 10px;
+
+    height: 400px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+}
+footer > div.bloco1 > div.logo-redes > div.logo > img{
+    cursor: pointer;
+
+    margin: 0 0 0px 2px;
+    width: 200px;
+
+    transition: all 0.15s ease-out;
+}
+footer > div.bloco1 > div.logo-redes > div.logo > img:active{
+    transform: scale(95%);
+}
+footer > div.bloco1 > div.logo-redes > div.logo > p{
+    font-family: "Montserrat";
+    font-size: 0.95em;
+    color: white;
+}
+@media only screen and (max-width: 1195px){
+    footer > div.bloco1 > div.logo-redes > div.logo > p{
+        width: 400px;
+    }
+}
+footer > div.bloco1 > div.logo-redes > div.redes > h3{
+    font-family: 'Montserrat';
+    font-weight: 450;
+    color: white;
+    margin-bottom: 10px;
+}
+footer > div.bloco1 > div.logo-redes > div.redes > a > i{
+    color: white;
+
+    transition: all .5s ease-in-out;
+}
+footer > div.bloco1 > div.logo-redes > div.redes > a > i:hover{
+    color: var(--color-ceo-fonte);
+}
+footer > div.bloco1 > div.contato{
+    row-gap: 25px;
+    padding-right: 10px;
+
+    display: flex;
+    flex-direction: column;
+}
+footer > div.bloco1 > div.contato > h3{
+    font-family: 'Montserrat';
+    font-weight: 450;
+    color: white;
+}
+footer > div.bloco1 > div.contato > ul{
+    height: 140px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+footer > div.bloco1 > div.contato > ul > li{
+    color: white;
+    list-style-type: none;
+
+    cursor: pointer;
+}
+footer > div.bloco1 > div.contato > ul > li > a{
+    text-decoration: none;
+    color: white;
+}
+footer > div.bloco1 > div.contato > ul > li > a > i{
+    transition: all .5s ease-in-out;
+}
+footer > div.bloco1 > div.contato > ul > li > i{
+    transition: all .5s ease-in-out;
+}
+footer > div.bloco1 > div.contato > ul > li:hover > i{
+    color: var(--color-ceo-fonte);
+}
+footer > div.bloco1 > div.contato > ul > li:hover > a > i{
+    color: var(--color-ceo-fonte);
+}
+footer > div.bloco2{
+    background-color: var(--color-header);
+
+    margin-top: 1px;
+
+    height: 45px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer > div.bloco2 > p{
+    font-family: 'Montserrat';
+    font-weight: 400;
+    color: white;
+
+}
+
+div.bolha{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    position: fixed;
+    
+    bottom: 40px;
+    left: 94%;
+}
+div.bolha > p{
+    opacity: 0;
+    visibility: hidden;
+}
+div.bolha:hover > p{
+    transition: all 0.5s ease-in-out;
+    background-color: white;
+    color: black;
+    padding: 8px;
+    position: absolute;
+    right: 60px;
+    display: block;
+    width: 219px;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    opacity: 1;
+    visibility: visible;
+}
+div.bolha > a{
+    height: 52px;
+    width: 52px;
+}
+div.bolha > a > img{
+    height: 100%;
+    width: 52px;
+}
+ 
+/* BOXS OCULTOS */
 
 header > div.menu-mobile > svg.botao-menu{
     display: none; /* Ocultando botão hamburguer em desktop */
 }
 main > section.cliente > article.clientes > img.clone1, img.clone2{
-    display: none;
+    display: none; /* Desativando imagens repetidas */
 }
