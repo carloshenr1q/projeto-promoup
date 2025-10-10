@@ -174,7 +174,7 @@ const container = document.querySelector('.clientes');
 // ===========================================================================
 
 
-
+// Script para os cards dos depoimentos
     const boxDepoimentos = document.querySelector('.box-depoimentos');
     const setaEsquerda = document.querySelectorAll('.seta')[0];
     const setaDireita = document.querySelectorAll('.seta')[1];
@@ -214,3 +214,4 @@ const container = document.querySelector('.clientes');
 
     // --- Inicializa ---
     scrollParaIndex(index);
+/* ==================================================================== */

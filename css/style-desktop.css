@@ -636,7 +636,10 @@ footer > div.bloco2 > p{
     color: white;
 
 }
+/* ==================================================================== */
 
+
+/* Implementando a bolinha flutuante do whatsapp */
 div.bolha{
     width: 50px;
     height: 50px;
@@ -656,18 +659,20 @@ div.bolha > p{
     visibility: hidden;
 }
 div.bolha:hover > p{
-    transition: all 0.5s ease-in-out;
     background-color: white;
     color: black;
-    padding: 8px;
-    position: absolute;
-    right: 60px;
-    display: block;
-    width: 219px;
     border-radius: 15px;
     border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 8px;
     opacity: 1;
     visibility: visible;
+    width: 219px;
+
+    display: block;
+    position: absolute;
+    right: 60px;
+
+    transition: all 0.5s ease-in-out;
 }
 div.bolha > a{
     height: 52px;
@@ -677,12 +682,14 @@ div.bolha > a > img{
     height: 100%;
     width: 52px;
 }
+/* ==================================================================== */
  
-/* BOXS OCULTOS */
 
+/* BOXS OCULTOS */
 header > div.menu-mobile > svg.botao-menu{
     display: none; /* Ocultando botão hamburguer em desktop */
 }
 main > section.cliente > article.clientes > img.clone1, img.clone2{
     display: none; /* Desativando imagens repetidas */
 }
+/* ==================================================================== */
