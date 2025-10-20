@@ -3,7 +3,11 @@
 
 :root{
     --color-header: #2F0F4E;
-
+    --color-marketing-fundo: #2C0F39;
+    --color-marketing-fonte: #E48E16;
+    --color-marketing-fundoBotao: #340C43;
+    --color-sobre-fundo: #F6F9F5;
+    --color-ceo-fonte: #E48E16;
 }
 
 /* CABEÇA COM A LOGO, HAMBURGUER E MENU */
@@ -28,6 +32,16 @@ header > div.menu-mobile > svg.botao-menu{
 header > div.menu-mobile > img.logo{
     width: 130px;
 }
+header > div.menu-mobile > i{
+    display: block;
+    cursor: pointer;
+    color: white;
+
+    transition: all 1s ease;
+}
+header > div.menu-mobile > i.menu-ativo{
+    color: var(--color-ceo-fonte);
+}
 header > nav{
     max-height: 0;          /* começa fechado */
     overflow: hidden;       /* esconde conteúdo extra */
@@ -51,7 +65,7 @@ nav.ativo{
 
 /* Alterações para otimizar em celular em main */
 main > section.marketing{
-    background: url(../assets/images/background-marketing.png) right top;
+    background: url(../assets/images/marketing/background-marketing-mobile.png) right top;
 
     justify-content: center;
 }
@@ -85,7 +99,7 @@ main > section.sobre > article.sobre > p{
 /* Criando alterações personalizadas em ceo e valores p/ diferentes tamanhos de tela do tablet e mobile */
 @media only screen and (min-width: 773px) { /* TABLET */
     main > section.valores{
-        background: gray url(../assets/images/banner-mobile.png) center top scroll;
+        background: gray url(../assets/images/valores/banner-mobile.png) center top scroll;
         background-size: cover;
         height:550px;
 
@@ -97,7 +111,7 @@ main > section.sobre > article.sobre > p{
 }
 @media only screen and (max-width: 772px){ /* MOBILE */
     main > section.valores{
-        background: gray url(../assets/images/banner-mobile.png) center bottom scroll;
+        background: gray url(../assets/images/valores/banner-mobile.png) center bottom scroll;
         height:900px;
 
         flex-direction: column;

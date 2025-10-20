@@ -36,6 +36,9 @@ header{
     justify-content: space-around;
     align-items: center;
 }
+header > h1{
+    display: none;
+}
 header > div.menu-mobile{
     display: flex;
     align-items: center;
@@ -72,7 +75,7 @@ main{
 }
 main > section.marketing{
     height: 760px;
-    background: black url(../assets/images/background-marketing.png) center center scroll;
+    background: black url(../assets/images/marketing/background-marketing.png) center center scroll;
     background-size: cover;
 
     display: flex;
@@ -158,7 +161,7 @@ main > section.sobre > article.sobre > p{
 
 /* Main com ceo/valores */
 main > section.valores{
-    background: gray url(../assets/images/banner-desktop.png) center center scroll;
+    background: gray url(../assets/images/valores/banner-desktop.png) center center scroll;
     background-size: cover;
     height: 650px;
     width: 100%;
@@ -686,7 +689,7 @@ div.bolha > a > img{
  
 
 /* BOXS OCULTOS */
-header > div.menu-mobile > svg.botao-menu{
+header > div.menu-mobile > i{
     display: none; /* Ocultando botão hamburguer em desktop */
 }
 main > section.cliente > article.clientes > img.clone1, img.clone2{
